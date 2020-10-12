@@ -1,4 +1,4 @@
 # company
 Simple Django CRUD Project 
 
-The project font work fine when it's over internet.
+The project font family work fine when it's over internet.
