@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<!-- Content -->
+<div class=" container-fluid bg-light">
+
+    <div class="row min-vh-100">
+
+        <div class="col-2 bg-white d-none d-lg-block d-xl-block">
+            {% include 'side-bar.html' %}            
+        </div>
+
+        <div class="col-lg-10 p-3 bg-color-1">
+           
+            <h3 class=" m-3">Edit User</h3>
+            <hr class="mx-2">
+
+            <div class=" p-5 bg-white element-shadow">
+                
+                <!-- Edit Form -->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="form-row">
+                        <div class=" col-6 mb-4">
+                            {{form.first_name}}
+                        </div>
+                        <div class=" col-6 mb-4">
+                            {{form.last_name}}
+                        </div>
+                        <div class=" col-6 mb-4">
+                            {{form.username}}
+                            {{form.username.errors}}
+                        </div>
+                        <div class=" col-6 mb-4">
+                            {{form.email}}
+                            {{form.email.errors}}
+                        </div>   
+    
+                    </div>   
+                  
+                    <button type="submit" class="btn btn-success">Update</button>
+    
+                </form>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+<!-- End content -->
+
+{% endblock %}

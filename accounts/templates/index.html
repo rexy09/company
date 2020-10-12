@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<!-- Content -->
+<div class=" container-fluid bg-light">
+
+    <div class="row min-vh-100">
+
+        <div class="col-2 bg-white d-none d-lg-block d-xl-block">
+            {% include 'side-bar.html' %}
+        </div>
+
+        <div class="col-lg-10 p-3 bg-color-1">
+
+            <h3 class=" m-3">Welcome!</h3>
+            <hr>
+
+            <div class=" row  p-3">
+
+                <div class=" col-lg-4 mb-4 bg-white element-shadow p-3 rounded-lg" style="border-left: 3px solid #34a1cd;">
+                    <div class="d-flex flex-row">
+                        <div class="d-flex align-items-center mx-3">
+                            <div class="" style="border-radius:200px; background-color:#34a1cd;">
+                                <i class="fas fa-user p-4 text-color- text-light fa-2x"></i>
+                            </div>
+                            
+                        </div>
+                        <div class="ml-3 d-flex flex-column">
+                            <div class="mt-2">
+                                
+                                <h4 class="font-weight-bold">{{users}}</h4>
+                            </div>
+                            <div>
+                                <h5 class="text-muted">Users</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- End content -->
+
+{% endblock %}

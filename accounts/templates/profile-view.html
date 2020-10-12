@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<!-- Content -->
+<div class=" container-fluid bg-light">
+
+    <div class="row min-vh-100">
+
+        <div class="col-2 bg-white d-none d-lg-block d-xl-block">
+            {% include 'side-bar.html' %}            
+        </div>
+
+        <div class="col-lg-10 p-3 bg-color-1">
+
+            <h3 class=" m-3">My Profile</h3>
+
+            <hr class="mx-2">
+
+            <div class="bg-white element-shadow p-3">
+                <div class="row">
+                    <div class=" col-lg-4 d-flex justify-content-center">
+
+                        <img src="{% static 'img/profile.png' %}" alt="" width="300">
+    
+                    </div>
+                    <div class=" col-lg-8">
+
+                        <div class="mt-lg-5 pt-3">
+                            <h3 class=" font-weight-bold">{{obj.get_full_name}}</h3>
+                            <h5 class="text-muted">@{{obj.username}}</h5>
+                            <p>{{obj.email}}</p>
+
+                        </div>                        
+    
+                    </div>
+                    
+                </div>
+                
+            </div>            
+
+        </div>
+
+    </div>
+
+</div>
+<!-- End content -->
+
+{% endblock %}

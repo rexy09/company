@@ -1,0 +1,21 @@
+{% load static %}
+
+<!-- Side Bar -->
+<h6 class=" font-weight-bold text-muted px-2 pt-3">USER</h6>
+<div class=" d-flex flex-column ">
+    
+    <div class="p-2 side-bar-link">
+        <a href="{% url 'register-user' %}" class="text-decoration-none">
+            <i class="fas fa-user-plus px-2 text-color-2"></i>
+            <span class="text-dark px-2">Register User</span>
+        </a>
+    </div>
+    <div class="p-2 side-bar-link">
+        <a href="{% url 'list-user' %}" class="text-decoration-none">
+            <i class="fas fa-list px-2 text-color-2"></i>
+            <span class="text-dark px-2">List User</span>
+        </a>
+    </div>
+    
+</div>
+<!-- End Side Bar -->
